@@ -96,73 +96,73 @@
     <div id="questionsContainer"></div>
     <div class="button-group">
         <button id="submitBtn" onclick="submitTest()">提交測驗</button>
-        <button id="resetBtn" onclick="resetTest()">重新測驗</button>
+        <button id="resetBtn" onclick="resetTest()">重新測試</button>
     </div>
     <div id="result"></div>
 
     <script>
         const questions = [
             {
-                question: "❶ 當團隊面臨緊急狀況時，你會怎麼做？",
+                question: "1. 和朋友一起做報告時，我比較常是：",
                 options: [
-                    { text: "A. 立刻出面做決策，引導大家行動", type: "D" },
-                    { text: "B. 鼓舞團隊士氣，讓氣氛不要太緊繃", type: "I" },
-                    { text: "C. 保持穩定節奏，照原計畫處理", type: "S" },
-                    { text: "D. 仔細分析問題後，再建議可行方案", type: "C" }
+                    { text: "A. 負責分配工作、帶大家進度的人", type: "D" },
+                    { text: "B. 負責炒熱氣氛、讓大家不尷尬的人", type: "I" },
+                    { text: "C. 安靜配合，大家需要幫忙我就幫的人", type: "S" },
+                    { text: "D. 查資料、做簡報內容的人", type: "C" }
                 ]
             },
             {
-                question: "❷ 如果你參與一個新團隊，你會：",
+                question: "2. 如果突然有一個比賽要參加，我會：",
                 options: [
-                    { text: "A. 馬上主動領導，設定方向", type: "D" },
-                    { text: "B. 和每個人打招呼，快速變熟", type: "I" },
-                    { text: "C. 安靜觀察一陣子，再融入團隊", type: "S" },
-                    { text: "D. 詢問工作規則與細節，先搞清楚流程", type: "C" }
+                    { text: "A. 馬上決定參加或不參加，行動力很快", type: "D" },
+                    { text: "B. 先問朋友要不要一起參加", type: "I" },
+                    { text: "C. 猶豫一下，想確定自己能不能勝任", type: "S" },
+                    { text: "D. 想清楚規則、風險和該準備什麼再決定", type: "C" }
                 ]
             },
             {
-                question: "❸ 你最在意以下哪件事？",
+                question: "3. 我最希望別人覺得我：",
                 options: [
-                    { text: "A. 目標能不能完成、有沒有成果", type: "D" },
-                    { text: "B. 團隊氣氛好不好、有沒有互動", type: "I" },
-                    { text: "C. 關係是否和諧、彼此有沒有信任", type: "S" },
-                    { text: "D. 資訊是否完整、流程有沒有瑕疵", type: "C" }
+                    { text: "A. 很有能力、可以靠得住", type: "D" },
+                    { text: "B. 很好笑、跟我在一起很開心", type: "I" },
+                    { text: "C. 很溫和、好相處", type: "S" },
+                    { text: "D. 很聰明、有條理", type: "C" }
                 ]
             },
             {
-                question: "❹ 當你收到一個新的任務時，你通常會：",
+                question: "4. 面對一件重要的事，我會怎麼做？",
                 options: [
-                    { text: "A. 直接分配人力、立刻開始執行", type: "D" },
-                    { text: "B. 找人一起討論點子，集思廣益", type: "I" },
-                    { text: "C. 先了解影響範圍，再穩定安排時程", type: "S" },
-                    { text: "D. 研究細節並整理清單再動手", type: "C" }
+                    { text: "A. 快速做決定、直接處理", type: "D" },
+                    { text: "B. 問問朋友的意見或想法", type: "I" },
+                    { text: "C. 小心地做，怕出錯", type: "S" },
+                    { text: "D. 先查資料或列計畫再開始做", type: "C" }
                 ]
             },
             {
-                question: "❺ 當你表達想法時，你傾向：",
+                question: "5. 跟同學相處時，我通常是：",
                 options: [
-                    { text: "A. 有力地表達立場，不怕衝突", type: "D" },
-                    { text: "B. 生動地分享，講得大家都笑出來", type: "I" },
-                    { text: "C. 委婉地說，顧慮他人感受", type: "S" },
-                    { text: "D. 條理清晰、有條有理", type: "C" }
+                    { text: "A. 比較有主見、會帶頭行動的人", type: "D" },
+                    { text: "B. 很健談、喜歡認識新朋友", type: "I" },
+                    { text: "C. 比較安靜，但會默默照顧別人", type: "S" },
+                    { text: "D. 很會注意細節，事情要做得剛剛好", type: "C" }
                 ]
             },
             {
-                question: "❻ 面對別人的批評時，你最常的反應是？",
+                question: "6. 做功課或準備考試時，我的方式是：",
                 options: [
-                    { text: "A. 不服氣，會為自己辯護", type: "D" },
-                    { text: "B. 會試著幽默帶過或緩和氣氛", type: "I" },
-                    { text: "C. 表面接受，私下可能悶悶不樂", type: "S" },
-                    { text: "D. 會檢討細節、釐清是非邏輯", type: "C" }
+                    { text: "A. 有時間就先做完，不拖拉", type: "D" },
+                    { text: "B. 跟朋友一起念，比較不無聊", type: "I" },
+                    { text: "C. 一步一步慢慢來", type: "S" },
+                    { text: "D. 先把流程想好、資料整理完再開始", type: "C" }
                 ]
             },
             {
-                question: "❼ 你對「變化」的態度是？",
+                question: "7. 當有人跟我意見不同時，我會：",
                 options: [
-                    { text: "A. 喜歡挑戰，變化讓我有動力", type: "D" },
-                    { text: "B. 覺得新奇有趣，有新機會就來", type: "I" },
-                    { text: "C. 有點抗拒，喜歡有秩序的流程", type: "S" },
-                    { text: "D. 要先理解變化背後的邏輯再說", type: "C" }
+                    { text: "A. 表達自己的想法，甚至有點強勢", type: "D" },
+                    { text: "B. 嘗試用開玩笑的方式帶過", type: "I" },
+                    { text: "C. 會讓一步，不太喜歡爭吵", type: "S" },
+                    { text: "D. 提出自己的理由，但講得比較客觀冷靜", type: "C" }
                 ]
             }
         ];
@@ -182,7 +182,7 @@
             questions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.className = 'question';
-                questionDiv.innerHTML = `<h3>${q.question}</h3>`;
+                questionDiv.innerHTML = <h3>${q.question}</h3>;
                 
                 const optionsDiv = document.createElement('div');
                 optionsDiv.className = 'options';
@@ -208,7 +208,7 @@
             const selectedType = event.target.dataset.type;
             
             // 移除同一題其他選項的選中狀態
-            const options = document.querySelectorAll(`[data-question-index="${questionIndex}"]`);
+            const options = document.querySelectorAll([data-question-index="${questionIndex}"]);
             options.forEach(opt => opt.classList.remove('selected'));
             
             // 設置當前選中狀態
@@ -250,10 +250,7 @@
                 `;
             });
             
-            resultHTML += `
-                <p>你的主要行為風格類型是：${types.join('、')}型</p>
-                <p style="margin-top: 20px;">${getTypeDescription(types)}</p>
-            `;
+            
             
             resultDiv.innerHTML = resultHTML;
             window.scrollTo(0, document.body.scrollHeight);
@@ -269,13 +266,13 @@
         // 類型描述
         function getTypeDescription(types) {
             const descriptions = {
-                D: "果斷直接，重視結果，喜歡挑戰",
-                I: "熱情開朗，善於交際，富有創意",
-                S: "穩健可靠，注重合作，避免衝突",
-                C: "謹慎細心，講求精確，重視邏輯"
+                D: "掌控型",
+                I: "影響型",
+                S: "穩定型",
+                C: "分析行"
             };
             
-            return types.map(type => `${type}型：${descriptions[type]}`).join('<br>');
+            return types.map(type => ${type}型：${descriptions[type]}).join('<br>');
         }
 
         // 初始化
