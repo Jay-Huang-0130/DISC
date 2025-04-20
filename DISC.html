@@ -182,7 +182,7 @@
             questions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.className = 'question';
-                questionDiv.innerHTML = <h3>${q.question}</h3>;
+                questionDiv.innerHTML = `<h3>${q.question}</h3>`;
                 
                 const optionsDiv = document.createElement('div');
                 optionsDiv.className = 'options';
@@ -208,7 +208,7 @@
             const selectedType = event.target.dataset.type;
             
             // 移除同一題其他選項的選中狀態
-            const options = document.querySelectorAll([data-question-index="${questionIndex}"]);
+            const options = document.querySelectorAll(`[data-question-index="${questionIndex}"]`);
             options.forEach(opt => opt.classList.remove('selected'));
             
             // 設置當前選中狀態
@@ -272,7 +272,7 @@
                 C: "分析行"
             };
             
-            return types.map(type => ${type}型：${descriptions[type]}).join('<br>');
+            return types.map(type => `${type}型：${descriptions[type]}`).join('<br>');
         }
 
         // 初始化
